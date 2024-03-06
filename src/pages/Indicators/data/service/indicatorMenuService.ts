@@ -1,4 +1,4 @@
-import { Result } from "../../../../shared/model/result";
+import { Result } from "@shared/model/result";
 import { IndicatorMenuSection } from "../model/in/indicatorMenuItem";
 import { IndicatorRepository } from "../repository/indicatorRepository";
 

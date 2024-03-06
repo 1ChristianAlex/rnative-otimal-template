@@ -12,7 +12,6 @@ app.json
 babel.config.js
 biome.json
 Gemfile
-index.js
 jest.config.js
 metro.config.js
 nativewind-env.d.ts

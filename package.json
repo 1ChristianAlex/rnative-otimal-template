@@ -1,13 +1,13 @@
 {
 	"name": "react-native-page-loader",
-	"version": "0.0.5",
+	"version": "0.0.10",
 	"private": false,
 	"scripts": {
 		"android": "react-native run-android",
 		"ios": "react-native run-ios",
 		"start": "react-native start",
 		"test": "jest",
-		"babel-compile": "npx babel --extensions .ts,.tsx ./src ./src -d ./dist --source-maps --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\" --config-file ./babel.config.js",
+		"babel-compile": "npx babel --extensions .ts,.tsx ./src -d ./dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\" --config-file ./babel.config.js",
 		"ts-compile": "tsc --project tsconfig.types.json",
 		"compile": "npm run babel-compile && npm run ts-compile"
 	},

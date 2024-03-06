@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import React from "react";
-import { Pressable } from "react-native";
 
 type RootStackParamList = IndicatorStackParamList;
 

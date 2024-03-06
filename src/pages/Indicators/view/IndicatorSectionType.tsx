@@ -1,8 +1,8 @@
+import CardButton from "@components/CardButton/CardButton";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import React from "react";
 import { Dimensions, Text, View } from "react-native";
-import CardButton from "../../../shared/components/CardButton/CardButton";
 import { IndicatorRouteNames } from "../routes";
 interface Props {
 	cardItem: { name: string; iconName: string }[];

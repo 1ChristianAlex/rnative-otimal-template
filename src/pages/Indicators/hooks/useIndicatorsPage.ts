@@ -1,6 +1,6 @@
+import { useToastErrorMessage } from "@shared/hooks/useToastErrorMessage";
+import { Result } from "@shared/model/result";
 import { useCallback, useEffect, useState } from "react";
-import { useToastErrorMessage } from "../../../shared/hooks/useToastErrorMessage";
-import { Result } from "../../../shared/model/result";
 import { IndicatorMenuSection } from "../data/model/in/indicatorMenuItem";
 import { IndicatorRepository } from "../data/repository/indicatorRepository";
 import { IndicatorMenuService } from "../data/service/indicatorMenuService";
