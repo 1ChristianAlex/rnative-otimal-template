@@ -10,8 +10,10 @@ interface Props {
 }
 
 const IndicatorSectionType: React.FC<Props> = ({ cardItem, name }) => {
-	const width = Dimensions.get("window").width;
+	const getWidth = () => Dimensions.get("window").width;
 	const navigation = useNavigation();
+
+	const width = getWidth();
 
 	return (
 		<View className="w-full p-4">

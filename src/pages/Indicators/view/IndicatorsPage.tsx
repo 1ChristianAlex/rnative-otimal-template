@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import { useIndicatorsPage } from "../hooks/useIndicatorsPage";
 import IndicatorSectionType from "./IndicatorSectionType";
+import { useIndicatorsPage } from "./hooks/useIndicatorsPage";
 
 const IndicatorsPage: React.FC = () => {
 	const { menuSection } = useIndicatorsPage();
