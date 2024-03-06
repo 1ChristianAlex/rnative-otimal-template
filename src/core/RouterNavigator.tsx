@@ -1,13 +1,25 @@
+import DashboardStack from "@pages/Dashboard";
+import IndicatorsStack from "@pages/Indicators";
+import { IndicatorStackParamList } from "@pages/Indicators/routes";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import React from "react";
-import IndicatorsStack from "../pages/Indicators";
+import { Pressable } from "react-native";
+
+type RootStackParamList = IndicatorStackParamList;
+
+declare global {
+	namespace ReactNavigation {
+		interface RootParamList extends RootStackParamList {}
+	}
+}
 
 const Tab = createBottomTabNavigator();
 
 enum RootRouteNames {
 	IndicatorsStack = "IndicatorsStack",
+	DashboardStack = "DashboardStack",
 }
 
 const RouterNavigator: React.FC = () => {
@@ -30,6 +42,9 @@ const RouterNavigator: React.FC = () => {
 						if (props.route.name === RootRouteNames.IndicatorsStack) {
 							iconName = "bar-chart";
 						}
+						if (props.route.name === RootRouteNames.DashboardStack) {
+							iconName = "dashboard";
+						}
 						return (
 							<Icon
 								name={iconName}
@@ -42,8 +57,14 @@ const RouterNavigator: React.FC = () => {
 				})}
 			>
 				<Tab.Screen
+					name={RootRouteNames.DashboardStack}
+					component={DashboardStack}
+					options={{ tabBarLabel: "Dashboard" }}
+				/>
+				<Tab.Screen
 					name={RootRouteNames.IndicatorsStack}
 					component={IndicatorsStack}
+					options={{ tabBarLabel: "Indicadores" }}
 				/>
 			</Tab.Navigator>
 		</NavigationContainer>

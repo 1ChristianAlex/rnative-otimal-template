@@ -1,6 +1,6 @@
 import c from "classnames";
 import React, { PropsWithChildren } from "react";
-import { StyleSheet, View, ViewProps } from "react-native";
+import { Pressable, PressableProps, StyleSheet, ViewProps } from "react-native";
 
 const styles = StyleSheet.create({
 	card: {
@@ -17,14 +17,20 @@ const styles = StyleSheet.create({
 	},
 });
 
-const Card: React.FC<PropsWithChildren<ViewProps>> = (props) => (
-	<View
-		tw={c("p-4 rounded-lg w-full")}
+const CardButton: React.FC<PropsWithChildren<PressableProps & ViewProps>> = (
+	props,
+) => (
+	<Pressable
+		className={c("p-4 rounded-lg w-full")}
 		{...props}
 		style={StyleSheet.compose(styles.card, props.style)}
+		android_ripple={{
+			borderless: false,
+			color: "#F3F5F7",
+		}}
 	>
 		{props.children}
-	</View>
+	</Pressable>
 );
 
-export default Card;
+export default CardButton;

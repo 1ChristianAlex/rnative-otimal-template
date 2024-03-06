@@ -1,10 +1,13 @@
 {
-	"extends": "@tsconfig/react-native/tsconfig.json",
+  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-     "baseUrl": ".",
-     "paths": {
-       "tests": ["tests/*"],
-       "@components/*": ["src/components/*"],
-     },
-      }
+    "baseUrl": ".",
+    "paths": {
+      "tests": ["tests/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@core/*": ["src/core/*"],
+    },
+  }
 }

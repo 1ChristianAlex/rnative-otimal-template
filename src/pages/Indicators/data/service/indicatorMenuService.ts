@@ -11,6 +11,7 @@ class IndicatorMenuService {
 				await Promise.all([
 					this._repo.getPastureIndicatorMenu(),
 					this._repo.getLockdownIndicatorMenu(),
+					this._repo.getGeneralIndicatorMenu(),
 				]),
 				null,
 			);

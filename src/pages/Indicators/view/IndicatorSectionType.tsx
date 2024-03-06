@@ -1,8 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
-import c from "classnames";
 import React from "react";
-import { Dimensions, FlatList, Text, View } from "react-native";
-import Card from "../../../shared/components/Card/Card";
+import { Dimensions, Text, View } from "react-native";
+import CardButton from "../../../shared/components/CardButton/CardButton";
+import { IndicatorRouteNames } from "../routes";
 interface Props {
 	cardItem: { name: string; iconName: string }[];
 	name: string;
@@ -10,6 +11,7 @@ interface Props {
 
 const IndicatorSectionType: React.FC<Props> = ({ cardItem, name }) => {
 	const width = Dimensions.get("window").width;
+	const navigation = useNavigation();
 
 	return (
 		<View className="w-full p-4">
@@ -20,16 +22,21 @@ const IndicatorSectionType: React.FC<Props> = ({ cardItem, name }) => {
 
 			<View className="w-full mt-3 flex flex-wrap items-stretch flex-row">
 				{cardItem.map((item) => (
-					<Card
+					<CardButton
 						key={`${item.iconName}-${item.name}-card`}
-						className={"mb-2 mr-2 h-[100]"}
-						style={{ width: width / 2 - (32 - 8) }}
+						className={"mb-2 mr-2 h-[100] flex flex-col justify-between"}
+						style={{
+							width: cardItem.length === 1 ? width - 38 : width / 2 - 24,
+						}}
+						onPress={() =>
+							navigation.navigate(IndicatorRouteNames.FarmMetaPage)
+						}
 					>
 						<View className="flex items-start">
-							<Icon name={item.iconName} color="#155873" size={19} />
+							<Icon name={item.iconName} color="#155873" size={24} />
 						</View>
-						<Text className="flex mt-2 text-black">{item.name}</Text>
-					</Card>
+						<Text className="flex mt-2 text-black text-sm">{item.name}</Text>
+					</CardButton>
 				))}
 			</View>
 		</View>

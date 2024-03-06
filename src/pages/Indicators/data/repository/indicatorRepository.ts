@@ -37,6 +37,18 @@ class IndicatorRepository {
 			],
 		});
 	}
+
+	async getGeneralIndicatorMenu() {
+		return new IndicatorMenuSection({
+			name: "Geral",
+			items: [
+				new IndicatorMenuItem({
+					iconName: "grass",
+					name: "Metas da fazenda",
+				}),
+			],
+		});
+	}
 }
 
 export { IndicatorRepository };
