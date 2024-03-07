@@ -2,7 +2,7 @@ import CardButton from "@components/CardButton/CardButton";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import React from "react";
-import { Dimensions, Text, View } from "react-native";
+import { Text, View, useWindowDimensions } from "react-native";
 import { IndicatorRouteNames } from "../routes";
 interface Props {
 	cardItem: { name: string; iconName: string }[];
@@ -10,10 +10,9 @@ interface Props {
 }
 
 const IndicatorSectionType: React.FC<Props> = ({ cardItem, name }) => {
-	const getWidth = () => Dimensions.get("window").width;
 	const navigation = useNavigation();
 
-	const width = getWidth();
+	const { width } = useWindowDimensions();
 
 	return (
 		<View className="w-full p-4">
