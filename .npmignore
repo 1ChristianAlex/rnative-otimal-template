@@ -18,3 +18,4 @@ nativewind-env.d.ts
 tailwind.config.js
 tsconfig.json
 tsconfig.types.json
+babel.config.npm.js

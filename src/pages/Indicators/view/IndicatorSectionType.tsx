@@ -4,6 +4,7 @@ import { Icon } from "@rneui/themed";
 import React from "react";
 import { Text, View, useWindowDimensions } from "react-native";
 import { IndicatorRouteNames } from "../routes";
+
 interface Props {
 	cardItem: { name: string; iconName: string }[];
 	name: string;
