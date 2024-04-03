@@ -1,6 +1,6 @@
 enum IndicatorRouteNames {
-	IndicatorsPage = "IndicatorsPage",
-	FarmMetaPage = "FarmMetaPage",
+	IndicatorsPage = "IndicatorsPageComponent",
+	FarmMetaPage = "FarmMetaPageComponent",
 }
 
 type IndicatorStackParamList = {

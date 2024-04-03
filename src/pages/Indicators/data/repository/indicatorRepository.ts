@@ -4,7 +4,7 @@ import {
 } from "../model/in/indicatorMenuItem";
 
 class IndicatorRepository {
-	async getPastureIndicatorMenu() {
+	getPastureIndicatorMenu = async () => {
 		return new IndicatorMenuSection({
 			name: "Pasto",
 			items: [
@@ -16,8 +16,8 @@ class IndicatorRepository {
 				new IndicatorMenuItem({ iconName: "grass", name: "Vistoria de Lotes" }),
 			],
 		});
-	}
-	async getLockdownIndicatorMenu() {
+	};
+	getLockdownIndicatorMenu = async () => {
 		return new IndicatorMenuSection({
 			name: "Confinamento",
 			items: [
@@ -36,9 +36,9 @@ class IndicatorRepository {
 				}),
 			],
 		});
-	}
+	};
 
-	async getGeneralIndicatorMenu() {
+	getGeneralIndicatorMenu = async () => {
 		return new IndicatorMenuSection({
 			name: "Geral",
 			items: [
@@ -48,7 +48,7 @@ class IndicatorRepository {
 				}),
 			],
 		});
-	}
+	};
 }
 
 export { IndicatorRepository };

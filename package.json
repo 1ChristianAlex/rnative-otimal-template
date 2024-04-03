@@ -1,13 +1,13 @@
 {
 	"name": "react-native-page-loader",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"private": false,
 	"scripts": {
 		"android": "react-native run-android",
 		"ios": "react-native run-ios",
 		"start": "react-native start",
 		"test": "jest",
-		"babel-compile": "npx babel --extensions .ts,.tsx ./src -d ./dist --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\" --config-file ./babel.config.js",
+		"babel-compile": "npx babel --extensions .ts,.tsx ./src -d ./dist/ --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\" --config-file ./babel.config.npm.js",
 		"ts-compile": "tsc --project tsconfig.types.json",
 		"compile": "npm run babel-compile && npm run ts-compile"
 	},
@@ -26,10 +26,12 @@
 		"react-native-vector-icons": "^10.0.3"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.23.9",
-		"@babel/core": "^7.20.0",
+		"@babel/cli": "^7.24.1",
+		"@babel/core": "^7.24.3",
 		"@babel/node": "^7.23.9",
-		"@babel/preset-env": "^7.20.0",
+		"@babel/plugin-transform-typescript": "^7.24.1",
+		"@babel/preset-env": "^7.24.3",
+		"@babel/preset-react": "^7.24.1",
 		"@babel/preset-typescript": "^7.23.3",
 		"@babel/runtime": "^7.20.0",
 		"@biomejs/biome": "^1.5.3",
@@ -42,6 +44,10 @@
 		"@types/react-test-renderer": "^18.0.7",
 		"babel-jest": "^29.6.3",
 		"babel-plugin-module-resolver": "^5.0.0",
+		"babel-plugin-transform-inline-environment-variables": "^0.4.4",
+		"babel-plugin-transform-remove-console": "^6.9.4",
+		"babel-preset-expo": "^10.0.1",
+		"babel-preset-react-native": "^4.0.1",
 		"jest": "^29.6.3",
 		"react-test-renderer": "18.2.0",
 		"tailwindcss": "^3.3.2",

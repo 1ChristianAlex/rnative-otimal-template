@@ -5,7 +5,7 @@ import { IndicatorRepository } from "../repository/indicatorRepository";
 class IndicatorMenuService {
 	constructor(private _repo: IndicatorRepository) {}
 
-	async getIndicatorMenu() {
+	getIndicatorMenu = async () => {
 		try {
 			const result = new Result<IndicatorMenuSection[]>(
 				await Promise.all([
@@ -23,7 +23,7 @@ class IndicatorMenuService {
 
 			return new Result(null, new Error("Error on getting menu items"));
 		}
-	}
+	};
 }
 
 export { IndicatorMenuService };

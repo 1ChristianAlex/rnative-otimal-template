@@ -63,7 +63,7 @@ const RouterNavigator: React.FC = () => {
 				<Tab.Screen
 					name={RootRouteNames.IndicatorsStack}
 					component={IndicatorsStack}
-					options={{ tabBarLabel: "Indicadores" }}
+					options={{ tabBarLabel: "Indicadores", unmountOnBlur: true }}
 				/>
 			</Tab.Navigator>
 		</NavigationContainer>

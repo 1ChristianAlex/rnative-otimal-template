@@ -1,8 +1,6 @@
 import React from "react";
 import RouterNavigator from "./RouterNavigator";
 
-const App: React.FC = () => {
-	return <RouterNavigator />;
-};
+const App: React.FC = () => <RouterNavigator />;
 
 export default App;
